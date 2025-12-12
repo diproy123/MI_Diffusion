@@ -1,0 +1,55 @@
+{
+  "experiment_metadata": {
+    "timestamp": "2025-12-12T13:49:27.106536",
+    "python_version": "3.12.12",
+    "pytorch_version": "2.9.0+cu126",
+    "cuda_available": true,
+    "cuda_version": "12.6",
+    "device": "cuda",
+    "platform": "Linux-6.6.105+-x86_64-with-glibc2.35"
+  },
+  "model_configuration": {
+    "model_type": "interpretable_diffusion",
+    "img_size": 64,
+    "channels": 3,
+    "attention_heads": 8,
+    "transformer_layers": 3,
+    "hidden_dim": 256,
+    "timesteps": 1000,
+    "noise_schedule": "cosine"
+  },
+  "training_configuration": {
+    "epochs": 25,
+    "batch_size": 8,
+    "learning_rate": 0.0001,
+    "num_synthetic_samples": 2000,
+    "num_celeba_samples": 2000
+  },
+  "analysis_configuration": {
+    "intervention_timesteps": [
+      100,
+      300,
+      600,
+      900
+    ],
+    "circuit_analysis_enabled": true,
+    "cross_attention_analysis": true
+  },
+  "reproducibility_settings": {
+    "random_seed": 42,
+    "robustness_seeds": [
+      42,
+      123,
+      456,
+      789,
+      1024
+    ],
+    "n_bootstrap": 1000,
+    "confidence_level": 0.95
+  },
+  "additional_info": {
+    "final_validation_loss": 0.04071368863806128,
+    "model_parameter_count": 262076675,
+    "training_completed": true
+  }
+}
